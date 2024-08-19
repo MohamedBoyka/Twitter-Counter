@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Twitter Counter</string>
+    <string name="title_page">Twitter character count</string>
 </resources>

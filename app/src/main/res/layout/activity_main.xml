@@ -1,19 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/title_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:gravity="center"
+        android:text="@string/title_page"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/twitter_logo"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/logo_twitter"
+        app:layout_constraintTop_toBottomOf="@id/title_page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear_characters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/twitter_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_7sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_characters"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="@dimen/_7sdp"
+                android:text="Characters Typed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_counter_characters"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="@dimen/_20sdp"
+                android:text="0/280"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_7sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_characters"
+                android:gravity="center"
+                android:padding="@dimen/_7sdp"
+                android:text="Characters Remaining"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_remaining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_counter_characters"
+                android:gravity="center"
+                android:padding="@dimen/_20sdp"
+                android:text="280"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/ed_input"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        app:layout_constraintTop_toBottomOf="@id/linear_characters"
+        app:layout_constraintStart_toStartOf="@id/linear_characters"
+        app:layout_constraintEnd_toEndOf="@id/linear_characters"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:gravity="top"
+        android:maxLength="280"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingStart="@dimen/_12sdp"
+        android:textSize="@dimen/_10sdp"
+        android:background="@drawable/rectangle_edit_text_design"
+        android:hint="Start typing! You can enter up to 280 characters" />
+
+
+
+    <Button
+        android:id="@+id/btn_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/ed_input"
+        app:layout_constraintStart_toStartOf="@id/ed_input"
+        android:text="Copy Text"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_copy_button"
+        android:textAllCaps="false"
+
+        />
+
+    <Button
+        android:id="@+id/btn_clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/ed_input"
+        app:layout_constraintTop_toTopOf="@id/btn_copy"
+        android:background="@drawable/background_clear_button"
+        android:text="Clear Text"
+        android:textColor="@color/white"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:textSize="@dimen/_10ssp"
+        android:textAllCaps="false"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/btn_clear"
+        app:layout_constraintStart_toStartOf="@id/btn_copy"
+        app:layout_constraintTop_toBottomOf="@id/btn_copy"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/background_post_button"
+        android:text="Post tweet"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

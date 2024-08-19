@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="backgroundBlue">#E6F6FE</color>
+    <color name="backgroundCopyButton">#00A970</color>
+    <color name="backgroundClearButton">#DC0125</color>
+    <color name="backgroundPostButton">#03A9F4</color>
+    <color name="rectangleTextColor">#EDEDED</color>
 </resources>
