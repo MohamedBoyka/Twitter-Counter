@@ -3,6 +3,7 @@
     <style name="Base.Theme.TwitterCounter" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your dark theme here. -->
          <item name="colorPrimary">@color/backgroundBlue</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.TwitterCounter" parent="Base.Theme.TwitterCounter" />
