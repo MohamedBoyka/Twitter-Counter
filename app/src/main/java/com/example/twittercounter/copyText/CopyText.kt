@@ -1,4 +1,4 @@
-package com.example.twittercounter
+package com.example.twittercounter.copyText
 
 import android.content.ClipData
 import android.content.ClipboardManager

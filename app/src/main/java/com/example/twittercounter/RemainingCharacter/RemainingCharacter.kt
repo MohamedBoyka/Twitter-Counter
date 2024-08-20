@@ -1,4 +1,4 @@
-package com.example.twittercounter
+package com.example.twittercounter.RemainingCharacter
 
 import android.widget.EditText
 import android.widget.TextView

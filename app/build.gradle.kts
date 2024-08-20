@@ -55,4 +55,13 @@ dependencies {
     implementation(libs.sdp)
     implementation(libs.ssp)
 
+    // twitter
+    implementation(libs.twitter)
+    implementation(libs.twLifecycleRuntime)
+
+    // retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.okhttp)
+
 }
