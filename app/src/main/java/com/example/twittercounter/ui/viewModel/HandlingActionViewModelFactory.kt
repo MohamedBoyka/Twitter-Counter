@@ -1,4 +1,4 @@
-package com.example.twittercounter.ui
+package com.example.twittercounter.ui.viewModel
 
 import android.content.Context
 import androidx.lifecycle.ViewModel

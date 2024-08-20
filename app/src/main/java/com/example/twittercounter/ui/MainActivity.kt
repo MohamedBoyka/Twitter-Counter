@@ -1,4 +1,4 @@
-package com.example.twittercounter
+package com.example.twittercounter.ui
 
 import android.os.Bundle
 import android.text.Editable
@@ -6,18 +6,15 @@ import android.text.TextWatcher
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.twittercounter.RemainingCharacter.RemainingCharacter
-import com.example.twittercounter.copyText.CopyText
 import com.example.twittercounter.databinding.ActivityMainBinding
-import com.example.twittercounter.tweet.postTweet.PushPostTweet
-import com.example.twittercounter.ui.HandlingActionViewModel
-import com.example.twittercounter.ui.HandlingActionViewModelFactory
+import com.example.twittercounter.ui.viewModel.HandlingActionViewModel
+import com.example.twittercounter.ui.viewModel.HandlingActionViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val maxLength = 280
     private val remainingCharacter by lazy { RemainingCharacter() }
-
     private val viewModel: HandlingActionViewModel by viewModels { HandlingActionViewModelFactory(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,10 +1,9 @@
-package com.example.twittercounter.ui
+package com.example.twittercounter.ui.viewModel
 
 import android.content.Context
 import android.widget.EditText
 import androidx.lifecycle.ViewModel
 import android.widget.Toast
-import com.example.twittercounter.RemainingCharacter.RemainingCharacter
 import com.example.twittercounter.copyText.CopyText
 import com.example.twittercounter.tweet.postTweet.PushPostTweet
 
