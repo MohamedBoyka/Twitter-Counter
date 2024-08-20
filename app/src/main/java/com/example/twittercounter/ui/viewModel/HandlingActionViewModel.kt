@@ -4,12 +4,16 @@ import android.content.Context
 import android.widget.EditText
 import androidx.lifecycle.ViewModel
 import android.widget.Toast
+import androidx.lifecycle.LifecycleCoroutineScope
 import com.example.twittercounter.copyText.CopyText
 import com.example.twittercounter.tweet.postTweet.PushPostTweet
+import com.example.twittercounter.tweet.twitter4j.IntegrationSDK
 
-class HandlingActionViewModel(private val context: Context) : ViewModel() {
+class HandlingActionViewModel(private val context: Context , private val lifecycleScope: LifecycleCoroutineScope) : ViewModel() {
 
     private val pushPostTweet by lazy { PushPostTweet(context) }
+    private val integrationSDK by lazy { IntegrationSDK(context , lifecycleScope) }
+
     private val copyText by lazy { CopyText() }
 
     fun onCopyTextClicked(string: String) {
@@ -51,8 +55,7 @@ class HandlingActionViewModel(private val context: Context) : ViewModel() {
 
 
 
-            /*  twitterIntegration = IntegrationSDK(this, lifecycleScope)
-              twitterIntegration.initialize()*/
+          //  integrationSDK.initialize()
 
             pushPostTweet.sendTextOnTwitter(message)
         }

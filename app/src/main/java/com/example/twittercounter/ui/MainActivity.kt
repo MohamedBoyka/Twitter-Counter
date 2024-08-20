@@ -5,6 +5,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.twittercounter.RemainingCharacter.RemainingCharacter
 import com.example.twittercounter.databinding.ActivityMainBinding
 import com.example.twittercounter.ui.viewModel.HandlingActionViewModel
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val maxLength = 280
     private val remainingCharacter by lazy { RemainingCharacter() }
-    private val viewModel: HandlingActionViewModel by viewModels { HandlingActionViewModelFactory(this) }
+    private val viewModel: HandlingActionViewModel by viewModels { HandlingActionViewModelFactory(this , lifecycleScope) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
