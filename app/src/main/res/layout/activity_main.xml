@@ -34,7 +34,7 @@
 
     <LinearLayout
         android:id="@+id/linear_characters"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"
@@ -57,7 +57,7 @@
                 android:background="@drawable/background_characters"
                 android:gravity="center_vertical|center_horizontal"
                 android:padding="@dimen/_7sdp"
-                android:text="Characters Typed"
+                android:text="@string/characters_typed"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_9ssp"
                 android:textStyle="bold" />
@@ -69,7 +69,7 @@
                 android:background="@drawable/background_counter_characters"
                 android:gravity="center_vertical|center_horizontal"
                 android:padding="@dimen/_20sdp"
-                android:text="0/280"
+                android:text="@string/counter_characters"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_20ssp"
                 android:textStyle="bold" />
@@ -89,7 +89,7 @@
                 android:background="@drawable/background_characters"
                 android:gravity="center"
                 android:padding="@dimen/_7sdp"
-                android:text="Characters Remaining"
+                android:text="@string/characters_remaining"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_9ssp"
                 android:textStyle="bold" />
@@ -101,7 +101,7 @@
                 android:background="@drawable/background_counter_characters"
                 android:gravity="center"
                 android:padding="@dimen/_20sdp"
-                android:text="280"
+                android:text="@string/length_characters"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_20ssp"
                 android:textStyle="bold" />
@@ -126,7 +126,7 @@
         android:paddingStart="@dimen/_12sdp"
         android:textSize="@dimen/_10sdp"
         android:background="@drawable/rectangle_edit_text_design"
-        android:hint="Start typing! You can enter up to 280 characters" />
+        android:hint="@string/hint_post" />
 
 
 
@@ -137,7 +137,7 @@
         android:layout_marginTop="@dimen/_15sdp"
         app:layout_constraintTop_toBottomOf="@id/ed_input"
         app:layout_constraintStart_toStartOf="@id/ed_input"
-        android:text="Copy Text"
+        android:text="@string/copy_text"
         android:paddingEnd="@dimen/_10sdp"
         android:paddingStart="@dimen/_10sdp"
         android:textSize="@dimen/_10ssp"
@@ -154,7 +154,7 @@
         app:layout_constraintEnd_toEndOf="@id/ed_input"
         app:layout_constraintTop_toTopOf="@id/btn_copy"
         android:background="@drawable/background_clear_button"
-        android:text="Clear Text"
+        android:text="@string/clear_text"
         android:textColor="@color/white"
         android:paddingEnd="@dimen/_10sdp"
         android:paddingStart="@dimen/_10sdp"
@@ -164,6 +164,7 @@
 
 
     <Button
+        android:id="@+id/btn_push_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@id/btn_clear"
@@ -173,7 +174,7 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/background_post_button"
-        android:text="Post tweet"
+        android:text="@string/post_tweet"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/_12ssp"
